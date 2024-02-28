@@ -20,5 +20,17 @@ pipeline {
                 git branch: 'main', credentialsId: 'gitgustave', url: 'https://github.com/gitgustave/CI-CD-Project1'
             }
         }
+
+                stage("Build Application "){
+            steps{
+                sh "mvn clean package"
+            }
+        }
+
+                stage("Test Application"){
+            steps{
+                sh "mvn test"
+            }
+        }
     }
 }
