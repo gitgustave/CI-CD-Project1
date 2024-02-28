@@ -9,11 +9,11 @@ pipeline {
         maven 'maven_home'
     }
     stages{
-        stage("Clean Up WorkSpace"){
-            steps {
-                cleanWs()
-            }
-        }
+        //stage("Clean Up WorkSpace"){
+          //  steps {
+            //    cleanWs()
+            //}
+        //}
 
         stage("Checkout from SCM"){
             steps{
