@@ -10,11 +10,10 @@ pipeline {
                 cleanWs()
             }
         }
-    
-    stages{
         stage("Checkout from SCM"){
             steps{
                 git branch: 'main', credentialsId: 'gitgustave', url: 'https://github.com/gitgustave/CI-CD-Project1'
             }
         }
     }
+}
